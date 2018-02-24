@@ -1,5 +1,10 @@
 FROM python:2.7
 
+ENV DEBIAN_FRONTEND=noninteractive
+RUN apt-get -qq update -y && \
+    apt-get -qq install --no-install-recommends -y postgresql-client && \
+    apt-get clean all
+
 # use "build --build-arg processor_count=$(getconf _NPROCESSORS_ONLN)"
 ARG processor_count=1
 ENV PROCESSOR_COUNT $processor_count
