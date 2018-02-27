@@ -10,7 +10,7 @@ ARG processor_count=1
 ENV PROCESSOR_COUNT $processor_count
 
 #### Install GEOS ####
-ENV GEOS http://download.osgeo.org/geos/geos-3.6.2.tar.bz2
+ENV GEOS http://download.osgeo.org/geos/geos-3.5.0.tar.bz2
 
 WORKDIR /install-postgis
 WORKDIR /install-postgis/geos
